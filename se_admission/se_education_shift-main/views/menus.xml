@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Submenu -->
+        <menuitem name="Education Shift"
+            id="menu_action_se_education_shift"
+            action="action_se_education_shift_view"
+            parent="se_education_core.se_menu_config_general"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,90 @@
+<odoo>
+  <data>
+    <!--  list view  -->
+
+    <record model="ir.ui.view" id="se_campus_facility_venue_list">
+      <field name="name">se_campus_facility list</field>
+      <field name="model">se.venue</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="facility_type_id"/>
+          <field name="note"/>
+          <field name="is_default_venue"/>
+          <field name="is_admission_venue"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--  form view -->
+
+    
+    <record id="se_campus_facility_form_view" model="ir.ui.view">
+        <field name="name">Create Venue</field>
+        <field name="model">se.venue</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+              <group>
+                <group>
+                  <field name="name"/>
+                  <field name="facility_type_id"/>
+                  <field name="note"/>
+                </group>
+              </group> 
+              <h2>ADMISSIONS</h2>
+                <group>
+                  <group>
+                    <group><field name="is_default_venue"/></group>
+                    <group><field name="is_admission_venue"/></group>
+                  </group>
+                </group>
+              
+            </form>
+        </field>
+    </record>
+    
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="action_se_campus_facility_venue">
+      <field name="name">Venue</field>
+      <field name="res_model">se.venue</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="se_campus_facility.action_server">
+      <field name="name">se_campus_facility server</field>
+      <field name="model_id" ref="model_se_campus_facility_se_campus_facility"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="se_campus_facility" id="se_campus_facility.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="se_campus_facility.menu_1" parent="se_campus_facility.menu_root"/>
+    <menuitem name="Menu 2" id="se_campus_facility.menu_2" parent="se_campus_facility.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="se_campus_facility.menu_1_list" parent="se_campus_facility.menu_1"
+              action="se_campus_facility.action_window"/>
+    <menuitem name="Server to list" id="se_campus_facility" parent="se_campus_facility.menu_2"
+              action="se_campus_facility.action_server"/>
+-->
+  </data>
+</odoo>

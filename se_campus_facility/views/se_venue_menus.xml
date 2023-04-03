@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <!-- Menu -->
+        <!-- <menuitem id="se_venue_menu" name="Venue"/> -->
+        <!-- Sub Menu -->
+        <menuitem id="se_venue_sub_menu" name="Venue" action="action_se_campus_facility_venue" parent="se_education_core.se_menu_config_general"/>
+    </data>
+</odoo>

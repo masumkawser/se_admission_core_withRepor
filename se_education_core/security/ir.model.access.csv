@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_se_academic_educational_information,se_academic_educational_information,model_se_academic_educational_information,base.group_user,1,1,1,1
+access_se_academic_education_type,se_academic_education_type,model_se_academic_education_type,base.group_user,1,1,1,1
+access_se_address_type,se_address_type,model_se_address_type,base.group_user,1,1,1,1
+access_se_batch,se_batch,model_se_batch,base.group_user,1,1,1,1
+access_se_contact,se_contact,model_se_contact,base.group_user,1,1,1,1
+access_se_course,se_course,model_se_course,base.group_user,1,1,1,1
+access_se_department,se_department,model_se_department,base.group_user,1,1,1,1
+access_se_student,se_student,model_se_student,base.group_user,1,1,1,1
+access_se_student_course,se_student_course,model_se_student_course,base.group_user,1,1,1,1
+access_se_subject,se_subject,model_se_subject,base.group_user,1,1,1,1

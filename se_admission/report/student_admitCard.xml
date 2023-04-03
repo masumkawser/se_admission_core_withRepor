@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_student_admitcards">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <!-- <t t-call="web.external_layout"> -->
+                <container>
+                    <h1 style="text-align:center">Student Admit Card </h1>
+                    <hr/>
+                    <div class='row'>
+                        <div class="col">
+                            <img t-if="o.signature" t-att-src="o.signature" style="float:right" height="140" border="1" width="120" />
+                        </div>
+                        <div class="col">
+                            <h5>Student Namess:
+                                <b>
+                                    <span t-if="o.first_name" t-esc="o.first_name"/>
+                                    <span t-if="o.middle_name" t-esc="o.middle_name"/>
+
+                                    <span t-if="o.last_name" t-esc="o.last_name"/>
+
+                                </b>
+                            </h5>
+
+
+                            <h5>Applicant ID:
+                                <b>
+
+                                    <span t-if="o.student_id" t-esc="o.student_id"/>
+                                </b>
+                            </h5>
+                            <h5>Course:
+                                <b>
+                                    <span t-if="o.course_id" t-esc="o.course_id"/>
+                                </b>
+                            </h5>
+                            <h5>Batch:
+                                <b>
+                                    <span t-if="o.batch_id" t-esc="o.batch_id"/>
+                                </b>
+                            </h5>
+                            <h5>Admission Test Date:
+                                <b>
+                                    <span t-if="o.admission_test_date" t-esc="o.admission_test_date"/>
+                                </b>
+                            </h5>
+                            <!-- <h5>Admission Venues:
+                                <b>
+
+                                    <span t-if="venue_ids.name" t-esc="venue_ids.name"/>
+                                </b>
+                            </h5> -->
+                        </div>
+                    </div>
+                    <div>
+                        <h5 style="text-align:right;padding-top:10px;">
+                        Applicant Signature:
+                            <p style="text-align:right;padding-top:10px;">
+
+                                <img t-if="o.signature" t-att-src="o.signature" style="float:right" height="80" border="1" width="100"/>
+                            </p>
+                        </h5>
+                    </div>
+                    <div style="padding-top:20px">
+                        <h3 style="text-align:center">
+                             General instruction
+                            <hr>
+
+                            </hr>
+                        </h3>
+
+
+
+                        <ul>
+                            <li>Please print and bring admit card during the admission test preserve it for further admission formalities.</li>
+                            <li>Carrying mobile phone or any type of digital communication  device is strictly prohibited  in the  exam hall.</li>
+                            <li>candidate shall report to the respective hall of examinition 15 minutes prior to start of written examination.</li>
+
+                        </ul>
+                    </div>
+                </container>
+
+
+
+                <!-- </t> -->
+            </t>
+        </t>
+    </template>
+
+    <template id="report_student">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="se_admission.report_student_admitcards">
+
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

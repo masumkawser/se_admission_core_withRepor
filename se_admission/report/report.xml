@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report id="report_student_admitcard"
+     model="se.application"
+     report_type="qweb-pdf" 
+     string="Admit Card"
+     name="se_admission.report_student" 
+     file="se_admission.report_student" 
+     attachment_use="False" />
+
+
+</odoo>
